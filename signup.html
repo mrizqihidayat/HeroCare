@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .page-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .signup-form {
+      width: 350px;
+      background-color: #D4D4D6;
+      padding: 28px;
+      border-radius: 21px;
+      box-shadow: 0px 2.8px 10.5px rgba(0, 0, 0, 0.2);
+      color: #262832;
+      border: #262832 1.4px solid;
+    }
+
+    .title {
+      font-size: 16.8px;
+      font-weight: bold;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .input-field {
+      margin-bottom: 10.5px;
+    }
+
+    .input-field label {
+      font-size: 9.8px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 3.5px;
+    }
+
+    .input-field input,
+    .input-field select {
+      width: 100%;
+      padding: 7px;
+      border-radius: 3.5px;
+      border: none;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #262832;
+      font-size: 9.8px;
+    }
+
+    .signup-button {
+      padding: 8.4px;
+      background: #262832;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      border-radius: 17.5px;
+      cursor: pointer;
+      margin-top: 14px;
+      width: 100%;
+    }
+
+    .have-account {
+      margin-top: 10.5px;
+      text-align: right;
+      color: #262832;
+      font-size: 9.8px;
+    }
+
+    .have-account a {
+      color: #262832;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <form id="signupForm" class="signup-form">
+      <h2 class="title">Sign up</h2>
+
+      <div class="input-field">
+        <label>Nama Lengkap</label>
+        <input type="text" name="nama_lengkap" placeholder="Nama Lengkap" required />
+      </div>
+
+      <div class="input-field">
+        <label>Tanggal Lahir</label>
+        <input type="date" name="tanggal_lahir" required />
+      </div>
+
+      <div class="input-field">
+        <label>Jenis Kelamin</label>
+        <select name="jenis_kelamin" required>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+      </div>
+
+      <div class="input-field">
+        <label>Nomor Telepon</label>
+        <input type="tel" name="nomor_telepon" placeholder="Nomor Telepon" required />
+      </div>
+
+      <div class="input-field">
+        <label>Alamat</label>
+        <input type="text" name="alamat" placeholder="Alamat" required />
+      </div>
+
+      <div class="input-field">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+
+      <div class="input-field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
+
+      <div class="input-field">
+        <label>Konfirmasi Password</label>
+        <input type="password" name="confirm_password" placeholder="Konfirmasi Password" required />
+      </div>
+
+      <button type="submit" class="signup-button">Sign up</button>
+      <p class="have-account"><a href="login.html">Already have an account?</a></p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("signupForm");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Cegah form dikirim secara default
+
+      const password = form.password.value;
+      const confirmPassword = form.confirm_password.value;
+
+      // Arahkan ke halaman homepage.html jika valid
+      window.location.href = "homepage.html";
+    });
+  </script>
+</body>
+</html>

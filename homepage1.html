@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HEROCARE - The Green Country</title>
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+
+       body {
+           font-family: Helvetica, sans-serif;
+           background-color: #ffffff;
+           color: #2a2a2a;
+           line-height: 1.6;
+       }
+
+
+       .container {
+           min-height: 100vh;
+       }
+
+
+       .hero-learn .group-3 {
+           position: absolute;
+           width: 1262px;
+           height: 61px;
+           top: 20px;
+           left: 79px;
+       }
+ 
+       .hero-learn .group-4 {
+           position: absolute;
+           width: 558px;
+           height: 42px;
+           top: 8px;
+           left: 362px;
+       }
+ 
+       .hero-learn .group-5 {
+           position: absolute;
+           width: 118px;
+           height: 42px;
+           top: 0;
+           left: 0;
+       }
+ 
+       .hero-learn .overlap-group-4 {
+           position: relative;
+           width: 116px;
+           height: 42px;
+           background-image: url(images/bg\ overlap\ group4.svg);
+           background-size: 100% 100%;
+       }
+      
+       .hero-learn .overlap-5 {
+           position: relative;
+           width: 120px;
+           height: 42px;
+           background-image: url(images/bg\ overlap\ group4.svg);
+           background-size: 100% 100%;
+       }
+  
+       .hero-learn .text-wrapper-11 {
+           top: 12px;
+           left: 42px;
+           font-family: "Helvetica Neue-Medium", Helvetica;
+           font-weight: 500;
+           font-size: 14.1px;
+           position: absolute;
+           color: #ffffff;
+           letter-spacing: 0;
+           line-height: normal;
+           white-space: nowrap;
+       }
+  
+       .hero-learn .img-wrapper {
+           position: absolute;
+           width: 30px;
+           height: 30px;
+           top: 6px;
+           left: 8px;
+           background-color: #ffffff;
+           border-radius: 14.78px;
+       }
+  
+       .hero-learn .group-6 {
+           position: absolute;
+           width: 17px;
+           height: 22px;
+           top: 4px;
+           left: 6px;
+       }
+  
+       .hero-learn .group-7 {
+           position: absolute;
+           width: 121px;
+           height: 42px;
+           top: 0;
+           left: 144px;
+       }
+  
+       .hero-learn .group-8 {
+           position: absolute;
+           width: 124px;
+           height: 42px;
+           top: 0;
+           left: 291px;
+       }
+  
+       .hero-learn .overlap-6 {
+           position: relative;
+           width: 122px;
+           height: 42px;
+           background-image: url(images/bg\ overlap\ group4.svg);
+           background-size: 100% 100%;
+       }
+  
+       .hero-learn .vector-3 {
+           position: absolute;
+           width: 21px;
+           height: 18px;
+           top: 5px;
+           left: 4px;
+       }
+  
+       .hero-learn .group-9 {
+           position: absolute;
+           width: 118px;
+           height: 42px;
+           top: 0;
+           left: 442px;
+       }
+  
+       .hero-learn .overlap-7 {
+           position: relative;
+           width: 116px;
+           height: 42px;
+           background-image: url(images/bg\ overlap\ group4.svg);
+           background-size: 100% 100%;
+       }
+ 
+       .hero-learn .group-10 {
+           position: absolute;
+           width: 17px;
+           height: 17px;
+           top: 6px;
+           left: 6px;
+       }
+  
+       .hero-learn .group-11 {
+           position: absolute;
+           width: 239px;
+           height: 61px;
+           top: 0;
+           left: 0;
+       }
+  
+       .hero-learn .overlap-8 {
+           position: relative;
+           height: 61px;
+       }
+  
+       .hero-learn .screenshot {
+           position: absolute;
+           width: 96px;
+           height: 61px;
+           top: 0;
+           left: 0;
+       }
+  
+       .hero-learn .screenshot-2 {
+           position: absolute;
+           width: 164px;
+           height: 35px;
+           top: 11px;
+           left: 75px;
+       }
+  
+       .hero-learn .group-12 {
+           position: absolute;
+           width: 145px;
+           height: 41px;
+           top: 8px;
+           left: 1119px;
+       }
+  
+       .hero-learn .overlap-9 {
+           position: relative;
+           width: 128px;
+           height: 50px;
+           background-image: url(images/bg\ profil.svg);
+           background-size: 100% 100%;
+       }
+  
+       .hero-learn .person-circle {
+           position: absolute;
+           width: 24px;
+           height: 24px;
+           top: 9px;
+           left: 13px;
+       }
+  
+       .hero-learn .overlap-group-5 {
+           position: relative;
+           height: 24px;
+       }
+  
+       .hero-learn .vector-6 {
+           position: absolute;
+           width: 24px;
+           height: 24px;
+           top: 0;
+           left: 0;
+       }
+  
+       .text-wrapper-12 {
+           position: absolute;
+           top: 10px;
+           left: 45px;
+           font-family: "Helvetica Neue-Medium", Helvetica;
+           font-weight: 500;
+           color: #000000;
+           font-size: 16px;
+       }
+
+
+       .login-button {
+           background-color: transparent;
+           color: #2a2a2a;
+           border: 1px solid #d0d0d0;
+           border-radius: 0.375rem;
+           padding: 0.5rem 1rem;
+           cursor: pointer;
+           transition: background-color 0.2s;
+       }
+
+
+       .login-button:hover {
+               background-color: #f5f5f5;
+       }
+
+
+       .hero-section {
+           display: flex;
+           justify-content: center;
+           padding-top: 7rem;
+       }
+
+
+       .hero-container {
+           background-color: #262832;
+           border-radius: 1.5rem;
+           padding: 2rem;
+           overflow: hidden;
+           width: 1241px;
+           height: 460px;
+           flex-shrink: 0;
+           display: flex;
+       }
+
+
+       .hero-content {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           gap: 2rem;
+       }
+
+
+       .hero-text {
+           flex: 1;
+       }
+
+
+       .hero-title {
+           font-size: 3.4rem;
+           font-weight: bold;
+           color: white;
+           margin-bottom: 2.5rem;
+           margin-left: 2.6rem;
+           line-height: 1.2;
+       }
+
+
+       .hero-title .highlight {
+           color: #628ecb;
+       }
+
+
+       .stats-container {
+           display: flex;
+           gap: 3rem;
+           margin-left: 2.6rem;
+           margin-bottom: 2rem;
+       }
+
+
+       .stat-item {
+           text-align: left;
+       }
+
+
+       .stat-number {
+           font-size: 2.8rem;
+           font-weight: bold;
+           color: white;
+       }
+
+
+       .stat-description {
+           font-size: 1rem;
+           color: #d0d0d0;
+           margin-top: 0.25rem;
+       }
+
+
+       .hero-illustration {
+           flex: 1;
+           display: flex;
+           justify-content: flex-end;
+       }
+          
+       .hero-illustration img {
+           max-width: 90%;
+           height: auto;
+           border-radius: 1rem;
+       }
+
+
+       .vision-button-container {
+           display: flex;
+           justify-content: center;
+           margin-top: 3.5rem;
+           margin-bottom: 2rem;
+       }
+
+
+       .vision-button {
+           background-color: #628ecb;
+           color: white;
+           border: none;
+           border-radius: 9999px;
+           padding: 0.75rem 2rem;
+           font-size: 2rem;
+           cursor: pointer;
+           transition: background-color 0.2s;
+       }
+
+
+       .vision-button:hover {
+           background-color: #5a7fb8;
+       }
+
+
+       .vision-section {
+           margin: 3rem 6rem;
+           display: flex;
+           justify-content: center;
+       }
+
+
+       .vision-content {
+           display: flex;
+           align-items: center;
+           gap: 7rem;
+       }
+
+
+       .vision-image {
+           width: 35rem;
+           height: 21rem;
+           border-radius: 1rem;
+           overflow: hidden;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+       }
+
+
+       .vision-text {
+           flex: 1;
+       }
+
+
+       .vision-title {
+           font-size: 2.5rem;
+           font-weight: bold;
+           color: #2a2a2a;
+           margin-bottom: 1.5rem;
+       }
+
+
+       .vision-description {
+           color: #5a5a5a;
+           font-size: 1.5rem;
+           line-height: 1.7;
+       }
+
+
+       .help-section {
+           margin: 4rem 1.5rem;
+       }
+
+
+       .help-title {
+           font-size: 2rem;
+           font-weight: bold;
+           text-align: center;
+           color: #2a2a2a;
+           margin-bottom: 3rem;
+       }
+
+
+       .cards-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+           width: 92%;
+           margin: 0 auto;
+       }
+
+
+       .card {
+           border: 1px solid #d0d0d0;
+           border-radius: 0.5rem;
+           padding: 1.5rem;
+           text-align: center;
+           transition: box-shadow 0.2s;
+           width: 92%;
+           margin: 0 auto;
+       }
+
+
+       .card:hover {
+           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+       }
+
+
+       .card-icon {
+           width: 4rem;
+           height: 4rem;
+           background-color: #628ecb;
+           border-radius: 50%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           margin: 0 auto 1rem;
+           color: white;
+           font-size: 1.5rem;
+           font-weight: bold;
+       }
+
+
+       .card-title {
+           font-size: 1.25rem;
+           font-weight: bold;
+           color: #2a2a2a;
+           margin-bottom: 1rem;
+       }
+
+
+       .card-description {
+           color: #5a5a5a;
+           font-size: 0.875rem;
+           line-height: 1.6;
+           margin-bottom: 1.5rem;
+       }
+
+
+       .card-button {
+           background-color: transparent;
+           color: #5a5a5a;
+           border: 1px solid #5a5a5a;
+           border-radius: 0.375rem;
+           padding: 0.5rem 1rem;
+           cursor: pointer;
+           transition: all 0.2s;
+       }
+
+
+       .card-button:hover {
+           background-color: #5a5a5a;
+           color: white;
+       }
+          
+       @media (max-width: 768px) {
+           .header {
+               flex-direction: column;
+               gap: 1rem;
+           }
+
+
+           .nav {
+               flex-wrap: wrap;
+               justify-content: center;
+           }
+
+
+           .hero-content {
+               flex-direction: column;
+               text-align: center;
+           }
+
+
+           .hero-title {
+               font-size: 2rem;
+           }
+
+
+           .stats-container {
+               justify-content: center;
+               gap: 2rem;
+           }
+
+
+           .vision-content {
+               flex-direction: column;
+               text-align: center;
+           }
+
+
+           .vision-image {
+               width: 100%;
+               max-width: 20rem;
+           }
+
+
+           .cards-grid {
+               grid-template-columns: 1fr;
+           }
+       }
+
+
+       @media (max-width: 480px) {
+           .hero-container {
+               padding: 1rem;
+           }
+
+
+           .stats-container {
+               flex-direction: column;
+               gap: 1rem;
+           }
+
+
+           .help-section {
+               margin: 2rem 1rem;
+           }
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <div class="hero-learn">
+     <div class="group-3">
+       <div class="group-11">
+         <div class="overlap-8">
+           <img class="screenshot" src="images/logo.png" />
+           <img class="screenshot-2" src="images/nama app.png" />
+         </div>
+       </div>
+       <div class="group-4">
+         <div class="group-5">
+           <div class="overlap-group-4">
+            <a href="login.html">
+             <div class="text-wrapper-11">HeroLink</div>
+             <div class="img-wrapper"><img class="group-6" src="images/hero link logo.png" /></div>
+            </a>
+           </div>
+         </div>
+         <div class="group-7">
+           <div class="overlap-5">
+            <a href="login.html">
+             <div class="text-wrapper-11">HeroFund</div>
+             <div class="img-wrapper"><img class="vector-2" src="images/logo herofund.png" /></div>
+             </a>
+           </div>
+         </div>
+         <div class="group-8">
+           <div class="overlap-6">
+            <a href="login.html">
+             <div class="text-wrapper-11">HeroLearn</div>
+             <div class="img-wrapper"><img class="vector-3" src="images/logo herolearn.png" /></div>
+            </a>
+           </div>
+         </div>
+         <div class="group-9">
+           <div class="overlap-7">
+            <a href="login.html">
+             <div class="text-wrapper-11">HeroPoin</div>
+             <div class="img-wrapper"><img class="group-10" src="images/logo heropoint.png" /></div>
+             </a>
+           </div>
+         </div>
+       </div>
+       <div class="group-12">
+        <a href="login.html">
+         <div class="overlap-9">
+           <div class="person-circle">
+             <div class="overlap-group-5">
+               <img class="vector-6" src="images/person-circle.png" />
+             </div>
+           </div>
+           <div class="text-wrapper-12">Login</div>
+           </a>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+       <section class="hero-section">
+           <div class="hero-container">
+               <div class="hero-content">
+                   <div class="hero-text">
+                       <h1 class="hero-title">
+                           The Green Country,<br>
+                           Make a <span class="highlight">Win Country</span>
+                       </h1>
+
+
+                       <div class="stats-container">
+                           <div class="stat-item">
+                               <div class="stat-number">1 Ton</div>
+                               <div class="stat-description">
+                                   Weekly transaction<br>
+                                   volume count
+                               </div>
+                           </div>
+                           <div class="stat-item">
+                               <div class="stat-number">30%</div>
+                               <div class="stat-description">
+                                   Turning communities<br>
+                                   without recycling access
+                               </div>
+                           </div>
+                           <div class="stat-item">
+                               <div class="stat-number">101</div>
+                               <div class="stat-description">
+                                   Cities involved in<br>
+                                   the initiative
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+
+                   <div class="hero-illustration">
+                       <img src="images/v101_392.png" alt="Hero Illustration">
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <div class="vision-button-container">
+           <button class="vision-button">Our Vision</button>
+       </div>
+
+
+       <section class="vision-section">
+           <div class="vision-content">
+               <div class="vision-image">
+                   <img src="images/v101_327.png" alt="Vision Image">
+               </div>
+               <div class="vision-text">
+                   <h2 class="vision-title">Herocare Vision</h2>
+                   <p class="vision-description">
+                       Menjadi platform digital terdepan dalam pengelolaan daur ulang yang terintegrasi dan berkelanjutan, serta mendorong perubahan perilaku masyarakat menuju lingkungan yang lebih bersih dan bernilai.
+                   </p>
+               </div>
+           </div>
+       </section>
+
+
+       <section class="help-section">
+           <h2 class="help-title">How Can You Help Realize Our Vision?</h2>
+
+
+           <div class="cards-grid">
+               <div class="card">
+                   <div class="card-icon"><img src="images/herolink-logo.png" /></div>
+                   <h3 class="card-title">HeroLink</h3>
+                   <p class="card-description">
+                       Kamu bisa terhubung dengan organisasi lingkungan, relawan, atau inisiatif lokal untuk melakukan aksi nyata bersama.
+                   </p>
+                   <a href= login.html><button class="card-button">Jelajahi</button></a>
+               </div>
+
+
+               <div class="card">
+                   <div class="card-icon"><img class="vector-2" src="images/logo herofund.png" /></div>
+                   <h3 class="card-title">HeroFund</h3>
+                   <p class="card-description">
+                       Salurkan kontribusimu secara transparan dan bantu mereka yang membutuhkan bantuan dana untuk perubahan.
+                   </p>
+                   <a href= login.html><button class="card-button">Jelajahi</button></a>
+               </div>
+
+
+               <div class="card">
+                   <div class="card-icon"><img class="vector-3" src="images/logo herolearn.png" /></div>
+                   <h3 class="card-title">HeroLearn</h3>
+                   <p class="card-description">
+                       Akses modul, artikel, dan video edukatif tentang keberlanjutan, daur ulang, dan gaya hidup ramah lingkungan.
+                   </p>
+                   <a href= login.html><button class="card-button">Jelajahi</button></a>
+               </div>
+
+
+               <div class="card">
+                   <div class="card-icon"><img class="group-10" src="images/logo heropoint.png" /></div>
+                   <h3 class="card-title">HeroPoin</h3>
+                   <p class="card-description">
+                       Dapatkan reward saat menyumbang sampah, berdonasi, atau ikut aksi. Tukarkan dengan merchandise ramah lingkungan.
+                   </p>
+                   <a href= login.html><button class="card-button">Jelajahi</button></a>
+               </div>
+           </div>
+       </section>
+   </div>
+</body>
+</html>
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .login-container {
+      display: flex;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .login-panel {
+      background-color: #d9d9d9;
+      border-radius: 24px;
+      padding: 3rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 450px;
+      border: 2px solid #262832;
+    }
+
+    .login-form {
+      max-width: 320px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .login-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #628ecb;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 2rem;
+    }
+
+    .form-label {
+      display: block;
+      color: #403f3f;
+      font-weight: 500;
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-input {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid #403f3f;
+      padding: 0.5rem 0;
+      color: #403f3f;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus {
+      border-color: #628ecb;
+    }
+
+    .forgot-password {
+      display: block;
+      text-align: right;
+      color: #403f3f;
+      font-size: 0.875rem;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+
+    .forgot-password:hover {
+      color: #628ecb;
+    }
+
+    .login-button {
+      width: 100%;
+      background-color: #262832;
+      color: white;
+      border: none;
+      border-radius: 9999px;
+      padding: 1rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-bottom: 2rem;
+    }
+
+    .login-button:hover {
+      background-color: #403f3f;
+    }
+
+    .create-account {
+      display: block;
+      text-align: center;
+      color: #403f3f;
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .create-account:hover {
+      color: #628ecb;
+    }
+
+    @media (max-width: 768px) {
+      .login-container {
+        flex-direction: column;
+      }
+
+      .illustration-panel {
+        height: 300px;
+      }
+
+      .login-panel {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-panel">
+      <div class="login-form">
+        <h1 class="login-title">Login</h1>
+        <form onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" type="email" class="form-input" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" type="password" class="form-input" required />
+          </div>
+
+          <a href="#" class="forgot-password">Forget Password?</a>
+
+          <button type="submit" class="login-button">Login</button>
+
+          <a href="signup.html" class="create-account">Create an account</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault(); // Mencegah form submit bawaan
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Contoh validasi sederhana (bisa dihapus atau diganti dengan autentikasi sesungguhnya)
+      if (email && password) {
+        // Redirect ke halaman OTP
+        window.location.href = "otp.html";
+      } else {
+        alert("Please fill in both fields.");
+      }
+    }
+  </script>
+</body>
+</html>
+

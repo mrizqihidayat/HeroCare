@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+
+    .popup-container {
+      padding: 24px;
+      border-radius: 20px;
+    }
+
+
+    .popup-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #5b9bd5;
+    }
+
+
+    .popup-header span {
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .popup-title {
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: bold;
+        color: #5b9bd5;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .profile-img {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0 10px;
+      position: relative;
+    }
+
+
+    .profile-img img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #ccc;
+    }
+
+
+    .popup-name {
+      text-align: center;
+      color: #5b9bd5;
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+
+    .field label {
+      display: block;
+      font-size: 14px;
+      color: #5b9bd5;
+      margin-bottom: 2px;
+    }
+
+
+    .field span {
+      display: block;
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+      border-bottom: 1px solid #aaa;
+      padding: 4px 0;
+    }
+
+
+    .dob {
+      display: flex;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+
+    .dob span {
+      width: 30%;
+      text-align: center;
+    }
+
+
+    .save-button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #262832;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+
+    .popup-header span:first-child {
+    font-size: 28px;
+    padding: 4px 10px;
+    cursor: pointer;
+    user-select: none;
+    }
+
+
+  </style>
+</head>
+<body>
+
+
+  <div class="popup-container">
+    <div class="popup-header">
+      <span onclick="window.parent.document.getElementById('popupOverlay').style.display='none';">←</span>
+      <div class="popup-title">Edit Profile</div>
+      <span style="visibility:hidden;">X</span> <!-- Untuk meratakan tengah -->
+    </div>
+
+
+    <div class="profile-img">
+      <img src="person-circle.png" alt="Avatar">
+    </div>
+
+
+    <div class="popup-name">Bintang Kusuma</div>
+
+
+    <div class="field">
+      <label>Name</label>
+      <span>Bintang</span>
+    </div>
+
+
+    <div class="field">
+      <label>Email</label>
+      <span>Bintangkvin@gmail.com</span>
+    </div>
+
+
+    <div class="field">
+      <label>Phone Number</label>
+      <span>085174250703</span>
+    </div>
+
+
+    <div class="field">
+      <label>Date of Birth</label>
+      <div class="dob">
+        <span>25</span>
+        <span>07</span>
+        <span>2000</span>
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label>Gender</label>
+      <span>Laki-laki</span>
+    </div>
+
+
+    <div class="field">
+      <label>Address</label>
+      <span>Soekarno Hatta Street No. 36</span>
+    </div>
+
+
+    <button class="save-button" onclick="window.parent.document.getElementById('popupOverlay').style.display='none';">Save</button>
+  </div>
+
+
+</body>
+</html>
+
+
+

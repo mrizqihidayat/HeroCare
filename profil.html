@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil - Edit Profil</title>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+    }
+
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+
+    .profil {
+      width: 1440px;
+      height: 1414px;
+      background-color: #ffffff;
+      position: relative;
+    }
+
+
+    .profil .group {
+      position: absolute;
+      width: 1262px;
+      height: 61px;
+      top: 97px;
+      left: 77px;
+    }
+
+
+    .profil .div {
+      position: absolute;
+      width: 558px;
+      height: 42px;
+      top: 8px;
+      left: 362px;
+    }
+
+
+    .profil .img {
+      position: absolute;
+      width: 116px;
+      height: 42px;
+      top: 0;
+      left: 0;
+    }
+
+
+    .profil .group-2 {
+      position: absolute;
+      width: 119px;
+      height: 42px;
+      top: 0;
+      left: 144px;
+    }
+
+
+    .profil .group-3 {
+      position: absolute;
+      width: 122px;
+      height: 42px;
+      top: 0;
+      left: 291px;
+    }
+
+
+    .profil .group-4 {
+      position: absolute;
+      width: 116px;
+      height: 42px;
+      top: 0;
+      left: 442px;
+    }
+
+
+    .profil .overlap-group-wrapper {
+      position: absolute;
+      width: 239px;
+      height: 61px;
+      top: 0;
+      left: 0;
+    }
+
+
+    .profil .overlap-group {
+      position: relative;
+      height: 61px;
+    }
+
+
+    .profil .screenshot {
+      position: absolute;
+      width: 96px;
+      height: 61px;
+      top: 0;
+      left: 0;
+    }
+
+
+    .profil .screenshot-2 {
+      position: absolute;
+      width: 164px;
+      height: 35px;
+      top: 11px;
+      left: 75px;
+    }
+
+
+    .profil .group-12 {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      top: 8px;
+      left: 1119px;
+    }
+
+
+    .edit-profile-button {
+      width: 120px;
+      height: 35px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+      border-radius: 10px;
+      color: #5b9bd5;
+      font-weight: bold;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      border: #5b9bd5 1px solid;
+    }
+
+
+    .edit-profile-button:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+
+    .profil .overlap {
+      position: absolute;
+      width: 841px;
+      height: 194px;
+      top: 218px;
+      left: 508px;
+    }
+
+
+    .profil .rectangle {
+      position: absolute;
+      width: 841px;
+      height: 193px;
+      top: 1px;
+      left: 0;
+      background-color: #262832;
+      border-radius: 25px;
+      box-shadow: 0px 14px 14px #00000040;
+    }
+
+
+    .profil .text-wrapper {
+      position: absolute;
+      width: 368px;
+      top: 34px;
+      left: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 64px;
+    }
+
+
+    .profil .frame {
+      position: absolute;
+      width: 331px;
+      height: 194px;
+      top: 0;
+      left: 510px;
+    }
+
+
+    .profil .div-month {
+      position: absolute;
+      top: 452px;
+      left: 508px;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+
+    .profil .entry {
+      position: absolute;
+      width: 850px;
+      height: 136px;
+      left: 507px;
+      border-radius: 10px;
+      border: 2px solid #202020;
+    }
+
+
+    .profil .entry .text-wrapper-2 {
+      position: absolute;
+      top: 97px;
+      left: 34px;
+      color: #6f6b6b;
+      font-size: 16px;
+    }
+
+
+    .profil .entry .text-wrapper-3 {
+      position: absolute;
+      top: 22px;
+      left: 31px;
+      font-size: 24px;
+    }
+
+
+    .profil .entry .text-wrapper-4 {
+      position: absolute;
+      top: 61px;
+      left: 33px;
+      font-size: 20px;
+    }
+
+
+    .profil .entry .text-wrapper-5,
+    .profil .entry .text-wrapper-6 {
+      position: absolute;
+      top: 22px;
+      font-size: 24px;
+      right: 30px;
+    }
+
+
+    .sidebar {
+      position: absolute;
+      top: 218px;
+      left: 91px;
+      width: 376px;
+      height: 490px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+
+    .profile-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+
+    .profile-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6ba6df;
+    }
+
+
+    .divider {
+      width: 100%;
+      height: 4px;
+      background-color: #242527;
+      margin: 20px 0;
+    }
+
+
+    .menu {
+      width: 100%;
+      flex: 1;
+    }
+
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 20px;
+      border: 2px solid #000;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      background-color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+
+    .menu-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+
+    .logout-button {
+      width: 100%;
+      padding: 15px;
+      background-color: #e01616;
+      color: black;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+
+    .logout-button:hover {
+      opacity: 0.9;
+    }
+
+
+    #popupOverlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+
+    #editProfilePopup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 360px;
+      background: white;
+      border: 2px solid #5b9bd5;
+      border-radius: 20px;
+      padding: 24px;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+
+    #editProfilePopup h2 {
+      color: #5b9bd5;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+
+    #editProfilePopup label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+
+    #editProfilePopup input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+
+    #editProfilePopup .button-group {
+      text-align: right;
+    }
+
+
+    #editProfilePopup button {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+
+    #editProfilePopup .cancel-btn {
+      background: #ccc;
+    }
+
+
+    #editProfilePopup .save-btn {
+      background: #5b9bd5;
+      color: white;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profil">
+    <div class="sidebar">
+      <div class="profile-header">
+        <img src="img2/person-circle.png" class="profile-icon" />
+        <span class="profile-name">Bintangksmt</span>
+      </div>
+      <div class="divider"></div>
+      <div class="menu">
+        <div class="menu-item"><div class="menu-icon"><img src="img2/HeroLink.png"/></div><span>HeroLink</span></div>
+        <div class="menu-item"><div class="menu-icon"><img src="img2/HeroFund.png"/></div><span>HeroFund</span></div>
+        <div class="menu-item"><div class="menu-icon"><img src="img2/HeroPoin.png"/></div><span>HeroPoin</span></div>
+      </div>
+      <div class="divider"></div>
+      <button class="logout-button"  onclick="navigateTo('homepage1.html')">Log Out</button>
+    </div>
+
+
+    <div class="group">
+      <!-- ✅ Ubah bagian ini jadi tombol -->
+      <div class="div">
+        <img class="img" src="img2/logoherolink.png" onclick="navigateTo('herolink.html')" />
+        <img class="group-2" src="img2/logoherofund.png" onclick="navigateTo('fund.html')" />
+        <img class="group-3" src="img2/logoherolearn.png" onclick="navigateTo('herolearn.html')" />
+        <img class="group-4" src="img2/logoheropoin.png" onclick="navigateTo('heropoin.html')" />
+      </div>
+      <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+          <img class="screenshot" src="img2/logo(4).png" onclick="navigateTo('homepage.html')"/>
+          <img class="screenshot-2" src="img2/namaapp.png" onclick="navigateTo('homepage.html')"/>
+        </div>
+      </div>
+      <div class="group-12">
+        <button class="edit-profile-button">Edit Profile</button>
+      </div>
+    </div>
+
+
+    <div class="overlap">
+      <div class="rectangle"></div>
+      <div class="text-wrapper">Profil</div>
+      <img class="frame" src="img2/profil.png" />
+    </div>
+
+
+    <div class="div-month">May 2025</div>
+    <div class="entry" style="top: 507px;">
+      <div class="text-wrapper-2">20 May 2025</div>
+      <div class="text-wrapper-3">Bank Sampah</div>
+      <div class="text-wrapper-4">HeroPoin</div>
+      <div class="text-wrapper-5">+10</div>
+    </div>
+  </div>
+
+
+  <div id="popupOverlay" style="display:none;">
+    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 600px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000;">
+      <iframe src="editProfile.html" style="width:100%; height:100%; border:none;"></iframe>
+    </div>
+  </div>
+
+
+  <script>
+    const overlay = document.getElementById("popupOverlay");
+    const editBtn = document.querySelector(".edit-profile-button");
+
+
+    editBtn.addEventListener("click", () => {
+      overlay.style.display = "block";
+    });
+
+
+    overlay.addEventListener("click", function (e) {
+      if (e.target === this) {
+        overlay.style.display = "none";
+      }
+    });
+
+
+    function navigateTo(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
